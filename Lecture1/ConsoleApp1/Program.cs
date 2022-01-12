@@ -1,3 +1,16 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-Console.WriteLine("something else");
+﻿using System;
+
+class Program
+{
+    public static void main()
+    {
+        Guid guid = Guid.NewGuid();
+        string text = "a_new_string";
+        Console.WriteLine("Hello, World!");
+        Console.WriteLine("something else");
+    }
+
+
+
+
+}
