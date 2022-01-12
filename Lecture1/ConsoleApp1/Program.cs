@@ -8,6 +8,7 @@ class Program
         string text = "a_new_string";
         Console.WriteLine("Hello, World!");
         Console.WriteLine("something else");
+        //blank comment
     }
 
 
