@@ -10,7 +10,14 @@ namespace PrincessBrideTrivia
             string filePath = GetFilePath();
             Question[] questions = LoadQuestions(filePath);
 
-            int numberCorrect = 0;
+            //debug code section
+            //for (int i = 0; i < questions.Length; i++)
+            {
+                //Console.WriteLine("Total of " + questions.Length +" questions");
+            }
+            //end debug code section
+
+                int numberCorrect = 0;
             for (int i = 0; i < questions.Length; i++)
             {
                 bool result = AskQuestion(questions[i]);
@@ -89,6 +96,8 @@ namespace PrincessBrideTrivia
                 question.Answers[1] = answer2;
                 question.Answers[2] = answer3;
                 question.CorrectAnswerIndex = correctAnswerIndex;
+
+                questions[i] = question;
             }
             return questions;
         }
