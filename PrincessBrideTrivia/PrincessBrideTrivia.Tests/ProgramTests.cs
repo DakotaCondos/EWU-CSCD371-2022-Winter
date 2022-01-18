@@ -64,6 +64,7 @@ namespace PrincessBrideTrivia.Tests
             int numberOfQuestions, string expectedString)
         {
             // Arrange
+            
 
             // Act
             string percentage = Program.GetPercentCorrect(numberOfCorrectGuesses, numberOfQuestions);
