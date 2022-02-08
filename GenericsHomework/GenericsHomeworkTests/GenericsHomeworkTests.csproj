@@ -12,8 +12,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <Compile Include="GenericLinkedNodes.cs" />
-	  <Compile Include="GenericLinkedNodes1.cs" />
+	  <Compile Remove="Class1.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

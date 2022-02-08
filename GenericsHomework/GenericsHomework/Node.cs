@@ -14,7 +14,13 @@ public class Node<TValue>
 
     public override string ToString()
     {
-        return Value.ToString();
+        string? returnString = null;
+        if (Value is not null)
+            returnString = Value.ToString();
+
+        if(returnString is null)
+            return "";
+        return returnString;// check on what to do for this
     }
 
     //public void SetNext(Node<TValue> newNode)// move later

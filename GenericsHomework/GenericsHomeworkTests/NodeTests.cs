@@ -1,13 +1,12 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace GenericsHomeworkTests
+namespace GenericsHomeworkTests;
+
+[TestClass]
+public class NodeTests
 {
-    [TestClass]
-    public class NodeTests
+    [TestMethod]
+    public void TestMethod1()
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-        }
     }
 }
