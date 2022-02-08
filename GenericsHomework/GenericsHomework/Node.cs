@@ -3,7 +3,8 @@
 public class Node<TValue>
 {
     public TValue Value { get; set; }
-    public Node<TValue> Next { get; set; } //check on the private set
+    public Node<TValue> Next;
+    //public Node<TValue> Next { get; set }
 
     public Node(TValue value)
     {
@@ -20,6 +21,15 @@ public class Node<TValue>
     {
         return Value.ToString();
     }
+
+    //public void SetNext(Node<TValue> newNode)// move later
+    //{
+    //    Next = newNode;
+    //}
+    //public static Node<TValue> GetNext(Node<TValue> cursor)// move later
+    //{
+    //    return cursor.Next;
+    //}
 }
 
 

@@ -21,13 +21,14 @@ public class GenericLinkedNodes<TValue>
         {
             Node<TValue> lastInLine = GenericLinkedNodes<TValue>.Traverse(cursor);
             lastInLine.Next = newNode;
+            newNode.Next = cursor;
         }
     }
 
     private static Node<TValue> Traverse(Node<TValue> cursor)
     {
         Node<TValue> curentNode = cursor;
-        while (curentNode.Next != cursor)
+        while (curentNode != cursor)
         {
             curentNode = curentNode.Next;
         }
