@@ -1,14 +1,22 @@
 ﻿namespace GenericsHomework
 {
-    public class Node<T>
+    public class Node<TValue> where TValue : notnull
     {
-        public Node(T value)
+        public Node(TValue value)
         {
             Value = value;
         }
-        public T Value { get; set; }
-        public Node<T> Next { get; set; } 
+        public TValue Value { get; set; }
+        public Node<TValue> Next { get; private set; }
+        public void Append(TValue value)
+        {
+            Node<TValue> newNode = Next;
+        }
+        public void Clear()
+        {
 
+        }
+        
         public override string ToString()
         {
             return Value.ToString();
