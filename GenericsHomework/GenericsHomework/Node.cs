@@ -5,6 +5,7 @@
         public Node(TValue value)
         {
             Value = value;
+            Next = this;
         }
         public TValue Value { get; set; }
         public Node<TValue> Next { get; private set; }
