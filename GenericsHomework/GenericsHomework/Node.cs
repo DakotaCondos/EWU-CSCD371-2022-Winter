@@ -11,11 +11,6 @@ public class Node<TValue>
         Value = value;
         Next = this;
     }
-    
-    public void Clear()
-    {
-        Next = this;
-    }
 
     public override string ToString()
     {

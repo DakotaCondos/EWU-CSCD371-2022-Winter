@@ -12,27 +12,36 @@ public class GenericLinkedNodes<TValue>
     public void Append(TValue value)
     {
         Node<TValue> newNode = new(value);
-        //starting at cursor, walk to end (until node.next is cursor again,) then add
         if (cursor is null)
         {
             cursor = newNode;
         }
         else
         {
-            Node<TValue> lastInLine = GenericLinkedNodes<TValue>.Traverse(cursor);
+            Node<TValue> lastInLine = GenericLinkedNodes<TValue>.TraverseToLast(cursor);
             lastInLine.Next = newNode;
             newNode.Next = cursor;
         }
     }
+    private static Node<TValue> Traverse(Node<TValue> curentNode)
+    {
+        return curentNode.Next;
+    }
 
-    private static Node<TValue> Traverse(Node<TValue> cursor)
+    private static Node<TValue> TraverseToLast(Node<TValue> cursor)
     {
         Node<TValue> curentNode = cursor;
         while (curentNode != cursor)
         {
-            curentNode = curentNode.Next;
+            Traverse(curentNode);
         }
         return curentNode;
     }
+    public void Clear()
+    {
+        if (cursor is not null)
+            cursor.Next = cursor;
+    }
+
 }
 
