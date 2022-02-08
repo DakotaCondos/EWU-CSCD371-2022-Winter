@@ -4,7 +4,7 @@ public class Node<TValue>
 {
     public TValue Value { get; set; }
     public Node<TValue> Next;
-    //public Node<TValue> Next { get; set }
+    //public Node<TValue> Next { get; set } //set up to only be set in the instructor!!!!!!!!!!!!!!!!
 
     public Node(TValue value)
     {
